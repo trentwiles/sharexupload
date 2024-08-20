@@ -12,7 +12,7 @@ def home():
 def upload_file():
     file = request.files['file']
     file.save('/var/www/html/trentwil.es/a/' + file.filename)  # Save the file to a desired location
-    return 'File uploaded successfully!'
+    return 'https://trentwil.es/a/' + file.filename
 
 if __name__ == '__main__':
     app.run(port=6565)
